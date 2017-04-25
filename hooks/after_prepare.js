@@ -109,6 +109,7 @@ module.exports = function(context) {
     }
 
     function isCryptFile(file) {
+        /*
         if (!targetFiles.include.some(function(regexStr) { return new RegExp(regexStr).test(file); })) {
             return false;
         }
@@ -116,6 +117,11 @@ module.exports = function(context) {
             return false;
         }
         return true;
+        */
+        if (file.indexOf('.png.js')>-1) {
+            return true;
+        }
+        return false;
     }
 
     function encryptData(input, key, iv) {
